@@ -1,7 +1,7 @@
 .card-component {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
   align-items: center;
   justify-content: center;
   border: 1px solid red;
@@ -9,10 +9,10 @@
   margin: 10px;
 }
 
-.card-infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: auto;
+.card-text {
+  color: red;
+}
+
+.card-text span {
+  color: blue;
 }
