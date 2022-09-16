@@ -5,6 +5,7 @@ export function Card({ nome, constelacao, categoria, tecnica, idade }) {
     <div className='card-component'>
       <section className='card'>
         <h2>Cavaleiros</h2>
+
         <section className="card-infos">
           <span className='card-text'>Nome: <span>{nome}</span></span>
         </section>
@@ -20,6 +21,7 @@ export function Card({ nome, constelacao, categoria, tecnica, idade }) {
         <section className="card-infos">
           <span className='card-text'>Idade: <span>{idade}</span></span>
         </section>
+
       </section>
 
 

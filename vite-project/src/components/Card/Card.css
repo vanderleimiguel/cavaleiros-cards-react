@@ -1,18 +1,43 @@
 .card-component {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 50px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  width: 16rem;
+  margin: 0.5rem;
   display: flex;
-  flex-direction: column;
-  width: 20%;
-  align-items: center;
   justify-content: center;
-  border: 1px solid red;
-  border-radius: 8px;
-  margin: 10px;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-text {
-  color: red;
+  color: black;
 }
 
 .card-text span {
-  color: blue;
+  color: rgb(63, 27, 27);
+}
+
+@media (max-width: 1220px) {
+  .card-component {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .card-component {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 210px;
+    height: 180px;
+  }
 }

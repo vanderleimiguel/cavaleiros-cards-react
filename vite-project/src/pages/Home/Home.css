@@ -1,7 +1,6 @@
 .Home {
   position: relative;
   background-color: rgb(71, 71, 71);
-  min-height: calc(100vh - 60px);
   margin: 15px;
   padding: 15px;
   border-radius: 20px;
