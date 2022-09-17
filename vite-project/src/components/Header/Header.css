@@ -18,7 +18,7 @@
   background-color: rgba(255, 255, 255, 0.3);
   width: 470px;
   height: 45px;
-  margin-left: 15px;
+  margin-left: 1rem;
 }
 
 .Logo__titulo {
@@ -30,8 +30,16 @@
 }
 
 .btn-create-icon {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 10rem;
+  height: 3rem;
   position: relative;
-  right: 15px;
+  right: 1rem;
+  border: none;
+  cursor: pointer;
 }
 
 .create__icone {
