@@ -17,7 +17,7 @@ export function Form() {
     <div className="form">
       <form onSubmit={handleSubmit} className="form-inputs">
         <section>
-          <span>Nome:</span>
+          <span>Nome: </span>
           <input
             type="text"
             name="nome"
@@ -27,7 +27,7 @@ export function Form() {
           ></input>
         </section>
         <section>
-          <span>Constelacao</span>
+          <span>Constelacao: </span>
           <input
             type="text"
             name="constelacao"
@@ -37,7 +37,7 @@ export function Form() {
           ></input>
         </section>
         <section>
-          <span>Categoria:</span>
+          <span>Categoria: </span>
           <input
             type="text"
             name="categoria"
@@ -47,7 +47,7 @@ export function Form() {
           ></input>
         </section>
         <section>
-          <span>Tecnica:</span>
+          <span>Tecnica: </span>
           <input
             type="text"
             name="tecnica"
@@ -57,7 +57,7 @@ export function Form() {
           ></input>
         </section>
         <section>
-          <span>Idade:</span>
+          <span>Idade: </span>
           <input
             type="number"
             name="idade"
@@ -67,7 +67,7 @@ export function Form() {
           ></input>
         </section>
         <button type="submit" className="btn-submit">
-          Submit
+          ADICIONAR
         </button>
       </form>
     </div>
