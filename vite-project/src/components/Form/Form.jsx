@@ -19,7 +19,7 @@ export function Form() {
       <form onSubmit={handleSubmit} className="form-inputs">
         <section>
           <span>Nome: </span>
-          <input
+          <input className='form-nome'
             type="text"
             name="nome"
             onChange={(event) => {
@@ -29,7 +29,7 @@ export function Form() {
         </section>
         <section>
           <span>Constelacao: </span>
-          <input
+          <input className='form-constelacao'
             type="text"
             name="constelacao"
             onChange={(event) => {
@@ -39,7 +39,7 @@ export function Form() {
         </section>
         <section>
           <span>Categoria: </span>
-          <input
+          <input className='form-categoria'
             type="text"
             name="categoria"
             onChange={(event) => {
@@ -49,7 +49,7 @@ export function Form() {
         </section>
         <section>
           <span>Tecnica: </span>
-          <input
+          <input className='form-tecnica'
             type="text"
             name="tecnica"
             onChange={(event) => {
@@ -59,14 +59,14 @@ export function Form() {
         </section>
         <section>
           <span>Idade: </span>
-          <input
+          <input className='form-idade'
             type="number"
             name="idade"
             onChange={(event) => {
               setNewCavaleiro({ ...newCavaleiro, idade: event.target.value });
             }}
           ></input>
-        </section>
+        </section><br />
         <button type="submit" className="btn-submit">
           ADICIONAR
         </button>

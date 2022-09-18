@@ -12,6 +12,10 @@
   background-color: rgb(179, 179, 35);
 }
 
+.card-component:hover {
+  background-color: rgb(114, 114, 11);
+}
+
 .card-component h2 {
   font-size: 2rem;
 }

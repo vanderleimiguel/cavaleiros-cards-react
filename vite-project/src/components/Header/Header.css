@@ -45,6 +45,10 @@
   font-size: 2.5rem;
 }
 
+.btn-create-icon:hover {
+  background-color: rgb(114, 114, 11);
+}
+
 .create__icone {
   cursor: pointer;
 }

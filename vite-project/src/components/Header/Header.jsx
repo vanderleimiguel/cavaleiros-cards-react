@@ -4,6 +4,7 @@ import createIcon from '../../assets/images/create.png'
 import { useState } from 'react'
 import Modal from "react-modal"
 import { Form } from '../Form/Form'
+import { CgClose } from "react-icons/cg";
 
 const customStyles = {
   content: {
@@ -56,7 +57,29 @@ export function Header() {
         style={customStyles}
         contentLabel="form Create"
       >
+
+        <section
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-end",
+            alignItems: "center",
+          }}
+        >
+          <button
+            style={{
+              backgroundColor: "transparent",
+              cursor: "pointer",
+              border: "none",
+            }}
+            onClick={handleModal}
+          >
+            <CgClose size={28} color="red" />
+          </button>
+        </section>
         <Form />
+
+
       </Modal>
     </div>
   )

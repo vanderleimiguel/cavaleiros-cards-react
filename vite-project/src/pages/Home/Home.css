@@ -34,10 +34,24 @@
 .btn-delete {
   display: flex;
   margin: 0 auto;
-  background-color: red;
-  color: white;
-  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
+  font-family: Arial;
+  width: 15rem;
+  height: 50px;
+  border-width: 1px;
+  color: #fff;
+  border-color: #d0451b;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  text-shadow: inset 0px 1px 0px #854629;
+  background: linear-gradient(#d0451b, #d0451b);
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: rgb(252, 38, 38);
 }
 
 @media (max-width: 1220px) {
