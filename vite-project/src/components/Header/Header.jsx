@@ -26,7 +26,6 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-
 export function Header() {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -34,7 +33,6 @@ export function Header() {
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
   }
-
 
   return (
     <div className='header'>
@@ -57,7 +55,6 @@ export function Header() {
         style={customStyles}
         contentLabel="form Create"
       >
-
         <section
           style={{
             display: "flex",
@@ -78,8 +75,6 @@ export function Header() {
           </button>
         </section>
         <Form />
-
-
       </Modal>
     </div>
   )

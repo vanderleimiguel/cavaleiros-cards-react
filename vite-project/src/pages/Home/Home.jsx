@@ -38,12 +38,12 @@ export function Home() {
     setCavaleiroList(cavaleiros);
   }
 
-  async function deleteCavaleiro(cavaleiroId) {
+  async function deleteCavaleiro(cavaleiroId, cavaleiroNome) {
     await api.deleteCavaleiro(cavaleiroId);
     getCavaleiro()
     handleModal();
+    alert(`cavaleiro ${cavaleiroNome} deletado!`)
   }
-
 
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
@@ -55,7 +55,6 @@ export function Home() {
 
   return (
     <div className="Home">
-
       <div className="card-list">
         {cavaleiroList.map((item, index) => {
           return (
@@ -112,19 +111,16 @@ export function Home() {
             <h3>Categoria: {uniqueCavaleiro.categoria}</h3>
             <h3>Tecnica: {uniqueCavaleiro.tecnica}</h3>
             <h3>Idade: {uniqueCavaleiro.idade}</h3>
-            <hr />
           </section>
-        </section>
+        </section><br />
         <button className='btn-delete'
           onClick={() => {
-            deleteCavaleiro(uniqueCavaleiro._id);
-            console.log(uniqueCavaleiro._id);
+            deleteCavaleiro(uniqueCavaleiro._id, uniqueCavaleiro.nome);
           }}
         >
           Delete Cavaleiro
         </button>
       </Modal>
-
     </div>
   );
 }

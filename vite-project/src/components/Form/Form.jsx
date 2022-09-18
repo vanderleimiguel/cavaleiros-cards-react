@@ -9,9 +9,20 @@ export function Form() {
     event.preventDefault();
 
     setNewCavaleiro({ ...newCavaleiro });
+    var qtdForm = 0;
+    var key
+    for (key in newCavaleiro) {
+      if (newCavaleiro.hasOwnProperty(key)) {
+        qtdForm++;
+      }
+    }
 
-    await api.createCavaleiro(newCavaleiro);
-
+    if (newCavaleiro.nome == "" || newCavaleiro.constelacao == "" || newCavaleiro.categoria == "" || newCavaleiro.tecnica == "" || newCavaleiro.idade == "" || qtdForm < 5) {
+      alert("Preencha todos os campos")
+    } else {
+      await api.createCavaleiro(newCavaleiro);
+      location.reload();
+    }
   }
 
   return (
