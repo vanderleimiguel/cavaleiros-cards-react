@@ -1,22 +1,16 @@
 import './Card.css'
 
-export function Card({ nome, constelacao, categoria, tecnica, idade }) {
+export function Card({ nome, constelacao, categoria }) {
   return (
     <div className='card-component'>
 
       <h2>{nome}</h2>
 
       <section className="card-infos">
-        <span className='card-text'>Constelação: <span>{constelacao}</span></span>
+        <span className='card-text'>Cavaleiro de {categoria}</span>
       </section>
       <section className="card-infos">
-        <span className='card-text'>Categoria: <span>{categoria}</span></span>
-      </section>
-      <section className="card-infos">
-        <span className='card-text'>Tecnica: <span>{tecnica}</span></span>
-      </section>
-      <section className="card-infos">
-        <span className='card-text'>Idade: <span>{idade}</span></span>
+        <span className='card-text'>da Constelação de {constelacao}</span>
       </section>
     </div>
   );

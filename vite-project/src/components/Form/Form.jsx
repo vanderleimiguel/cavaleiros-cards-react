@@ -11,6 +11,7 @@ export function Form() {
     setNewCavaleiro({ ...newCavaleiro });
 
     await api.createCavaleiro(newCavaleiro);
+
   }
 
   return (

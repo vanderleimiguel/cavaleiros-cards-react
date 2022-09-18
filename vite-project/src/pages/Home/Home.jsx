@@ -2,6 +2,7 @@ import { Card } from '../../components/Card/Card'
 import { api } from '../../utils/Api/Api'
 import { useState, useEffect } from 'react'
 import Modal from "react-modal"
+import { CgClose } from "react-icons/cg";
 
 import './Home.css'
 
@@ -36,6 +37,13 @@ export function Home() {
     const cavaleiros = await api.getAllCavaleiros();
     setCavaleiroList(cavaleiros);
   }
+
+  async function deleteCavaleiro(cavaleiroId) {
+    await api.deleteCavaleiro(cavaleiroId);
+    getCavaleiro()
+    handleModal();
+  }
+
 
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
@@ -95,15 +103,26 @@ export function Home() {
               }}
               onClick={handleModal}
             >
-              {/* <CgClose size={28} color="red" /> */}
+              <CgClose size={28} color="red" />
             </button>
           </section>
-          <h2>{uniqueCavaleiro.nome}</h2>
-          <h3>{uniqueCavaleiro.constelacao}</h3>
-          <h3>{uniqueCavaleiro.categoria}</h3>
-          <h3>{uniqueCavaleiro.tecnica}</h3>
-          <h3>{uniqueCavaleiro.idade}</h3>
+          <section className='modal-personagem'>
+            <h2>Nome: {uniqueCavaleiro.nome}</h2>
+            <h3>Constelação: {uniqueCavaleiro.constelacao}</h3>
+            <h3>Categoria: {uniqueCavaleiro.categoria}</h3>
+            <h3>Tecnica: {uniqueCavaleiro.tecnica}</h3>
+            <h3>Idade: {uniqueCavaleiro.idade}</h3>
+            <hr />
+          </section>
         </section>
+        <button className='btn-delete'
+          onClick={() => {
+            deleteCavaleiro(uniqueCavaleiro._id);
+            console.log(uniqueCavaleiro._id);
+          }}
+        >
+          Delete Cavaleiro
+        </button>
       </Modal>
 
     </div>

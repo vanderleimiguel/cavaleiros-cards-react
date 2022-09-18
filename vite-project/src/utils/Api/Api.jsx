@@ -15,7 +15,16 @@ export const api = {
   getAllCavaleiros: async () => {
     const response = await fetch(defaultUrl + "/all-cavaleiros");
     const allCavaleiros = await response.json();
-
     return allCavaleiros;
   },
+
+  deleteCavaleiro: async (cavaleiroId) => {
+    const response = await fetch(defaultUrl + "/delete-cavaleiro/" + cavaleiroId, {
+      method: "DELETE",
+      headers: new Headers({ "Content-Type": "application/json" }),
+    });
+    const cavaleiroDeleted = await response.json();
+    return cavaleiroDeleted;
+  },
 };
+
