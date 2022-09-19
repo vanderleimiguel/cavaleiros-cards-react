@@ -4,6 +4,11 @@ Cavaleiros cards é uma pagina que permite salvar seus cavaleiros com dados como
 Este projeto foi construido com react e utilizado uma API propria
 Possui a opção de adicionar um novo cavaleiro e deletar um já existente.
 
+
+## Start projeto
+
+npm run dev
+
 ## Deploy Frontend
 
 https://
