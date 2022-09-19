@@ -18,6 +18,18 @@ export const api = {
     return allCavaleiros;
   },
 
+  updateCavaleiro: async (cavaleiroUpdate, id) => {
+    const response = await fetch(defaultUrl + "/update-cavaleiro/" + id, {
+      method: "PUT",
+      headers: new Headers({ "Content-Type": "application/json" }),
+      body: JSON.stringify(cavaleiroUpdate),
+    });
+    const cavaleiroUpdated = await response.json();
+    return cavaleiroUpdated
+  },
+
+
+
   deleteCavaleiro: async (cavaleiroId) => {
     const response = await fetch(defaultUrl + "/delete-cavaleiro/" + cavaleiroId, {
       method: "DELETE",

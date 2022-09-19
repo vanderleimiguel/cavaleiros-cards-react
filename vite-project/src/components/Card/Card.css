@@ -1,8 +1,8 @@
 .card-component {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  font-size: 1.2rem;
+  width: 90%;
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
   border: 1px solid rgb(0, 0, 0);
@@ -30,5 +30,5 @@
 
 .card-text {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
